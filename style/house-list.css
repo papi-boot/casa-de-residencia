@@ -1,0 +1,64 @@
+.house-list-wrapper {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+}
+
+.house-list-wrapper > .house-list-card:nth-child(2n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.house-list-wrapper > .house-list-card:nth-child(4n) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.house-list-card > .house-image {
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+  width: 100%;
+}
+.house-list-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.house-list-card > .view-house-wrapper {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 0;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  transition: var(--transition-1);
+  width: 100%;
+}
+
+.view-house-wrapper > .view-house-link {
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: var(--transition-1);
+}
+.view-house-link:hover {
+  background-color: var(--white);
+  color: #000;
+}
+.house-list-card:hover > .house-image {
+  filter: brightness(50%);
+  transform: scale(1.2);
+}
+.house-list-card:hover > .view-house-wrapper {
+  height: 100%;
+}
+
+@media only screen and (max-width: 576px){
+  .house-list-wrapper{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}

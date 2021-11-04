@@ -1,0 +1,7 @@
+
+.well-design-banner {
+  background: fixed url("/assets/banner/construction-banner.jpg") no-repeat center;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+}

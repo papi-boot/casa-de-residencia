@@ -1,0 +1,8 @@
+:root {
+  --primary-color: rgb(250, 203, 133);
+  --blue: rgb(50, 105, 233);
+  --white: rgb(245, 245, 245);
+  --transition-1: 0.3s ease all;
+  --font: "Noto Serif Display", serif;
+  --sec-font: "Noto Sans", sans-serif;
+}
